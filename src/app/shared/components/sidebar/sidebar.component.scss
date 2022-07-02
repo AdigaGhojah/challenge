@@ -1,0 +1,29 @@
+.sideBarContainer{
+  background-color: #f6f6f6;
+  width: 300px;
+  padding:16px 0;
+  height: calc(100vh - 100px);
+  border-left:1px solid #e8eff5;
+  h2{
+    color:#2a2828;
+    margin-bottom: 24px;
+    margin-right: 16px;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      a{
+        display: block;
+        padding:8px 24px;
+        font-size: 18px;
+        text-decoration: none;
+        color:#798086;
+        &.active,&:hover{
+          background-color: #d4e6f6;
+          border-right: 3px solid #429ae0;
+        }
+      }
+    }
+  }
+
+}

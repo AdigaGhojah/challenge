@@ -1,0 +1,8 @@
+<div class="sideBarContainer">
+  <h2>{{sideBarTitle}}</h2>
+  <ul>
+    <li *ngFor="let item of list">
+      <a [routerLink]="item.link" routerLinkActive="active">{{item.text}}</a>
+    </li>
+  </ul>
+</div>

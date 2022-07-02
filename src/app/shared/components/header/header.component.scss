@@ -1,0 +1,38 @@
+header,nav{
+  color:#fff;
+  height: 50px;
+}
+
+header{
+  background-color: #353332;
+  padding-left:16px;
+  .header-links{
+    background-color: #2a2828;
+    padding:0 8px
+  }
+  .username{
+    margin-left:16px;
+  }
+  svg{
+    width: 30px;
+  }
+}
+
+nav{
+  background-color: #2a2828;
+  ul{
+    list-style-type: none;
+    a{
+      padding: 7px 15px;
+      height: 100%;
+      text-decoration: none;
+      color:#fff;
+      border-bottom: 2px solid #2a2828;
+      &.active,&:hover{
+        border-bottom: 2px solid #fff;
+        background-image: linear-gradient(#272525, #464545);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,49 @@
+<div class="popup">
+  <div class="popup-header d-flex justify-between align-center">
+    <h3>{{ isAdd =='add' ? "إضافة" : "تعديل على" }} الاسم</h3>
+    <svg
+      class="close"
+      (click)="closePopUp.emit()"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 352 512"
+    >
+      <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+      <path
+        fill="#b4b4b4"
+        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+      />
+    </svg>
+  </div>
+  <div class="popup-body">
+    <form (ngSubmit)="onSubmit()" #nameForm="ngForm" class="form-container d-flex">
+      <div class="form-group d-flex">
+        <label for="name">الاسم<small class="required">*</small></label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="اكتب الاسم او الرقم..."
+          required
+          [(ngModel)]="name"
+          name="name"
+        />
+      </div>
+      <div class="form-group d-flex">
+        <label for="description">التفاصيل</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="description"
+          placeholder="التفاصيل"
+          name="description"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="popup-footer d-flex">
+    <button (click)="nameForm.ngSubmit.emit()" class="save" >حفظ</button>
+    <button (click)="closePopUp.emit()" class="cancel">إلغاء</button>
+  </div>
+</div>
+<div class="overlay" (click)="closePopUp.emit()"></div>

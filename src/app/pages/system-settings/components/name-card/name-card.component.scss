@@ -1,0 +1,29 @@
+.card{
+  border:1px solid #dcdcdc;
+  padding:12px;
+  .card-title{
+    font-size: 20px;
+  }
+  .actions-container{
+    border-right: 1px solid #e7e7e7;
+    gap: 20px;
+    padding:0 16px;
+    button{
+      background-color: transparent;
+      border:none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      svg{
+        width: 16px;
+        margin-left:8px;
+      }
+    }
+    .edit{
+      color: #0078d7;
+    }
+    .delete{
+      color:#d0021b;
+    }
+  }
+}

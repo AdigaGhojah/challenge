@@ -1,0 +1,19 @@
+<section class="d-flex w-100">
+  <app-sidebar [list]="sideBarList" sideBarTitle="إدارة المعاملات"></app-sidebar>
+  <div class="w-100">
+    <div class="cards-action-bar d-flex align-center">
+      <button class="d-flex align-center add-button" (click)="openPopup(true)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path fill="#0078d7" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
+        إضافة
+      </button>
+      <input type="text" (input)="filterCards($event)" placeholder="ابحث عن الاسم">
+    </div>
+    <div class="cards-container d-flex">
+      <app-name-card *ngFor="let card of cards;let i = index" [card]="card" [index]="i"></app-name-card>
+    </div>
+  </div>
+
+
+  <app-name-popup *ngIf="isPopupOpened" [isAdd]="isAdd" [editCard]="editCard" (closePopUp)="popupClosed()"></app-name-popup>
+
+</section>
